@@ -1,8 +1,12 @@
+//#region Computer choice function
 function getComputerChoice(){
     const choices = ["Rock", "Paper", "Scissors"];
     const result = choices[Math.floor(Math.random() * choices.length)];
     return result;
 }
+//#endregion
+
+//#region Variables and function to play the round
 let playerWin = 0;
 let compWin = 0;
 let tie = 0;
@@ -42,14 +46,41 @@ function playRound(playerSelection, computerSelection){
     else if (playerSelection === computerSelection){
         console.log("Draw!");
         tie++;
-        roundWinner = 'Tie'
+        roundWinner = "tie";
+    }
+    console.log(`Winner of round: ${roundWinner}`);
+  
+}
+//#endregion
+
+//#region Who won the game function
+function whoWon(playerWin, compWin, tie){
+    if (playerWin > compWin){
+        console.log("You won the whole game!");
+    }
+    else if (playerWin < compWin){
+        console.log("You lose");
+    }
+    else{
+        console.log("NO Winner");
     }
 }
+//#endregion
 
+//#region Main game function to play the game
+function game(){
+    for (let i = 0; i < 5; i++){
+        
+        const playerSelection = prompt("Rock Paper Scissors?");
+        const computerSelection = getComputerChoice();
+        playRound(playerSelection, computerSelection);
+        
+        
+    }
+    whoWon(playerWin, compWin, tie,);
 
-const playerSelection = prompt();
-const computerSelection = getComputerChoice();
-playRound(playerSelection, computerSelection);
+}
+//#endregion
 
-
-
+// Play the game.
+game();
