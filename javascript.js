@@ -3,15 +3,16 @@ const buttons = document.querySelectorAll('[data-selection]');
 const scoreOfPlayer = document.querySelector('.player-score');
 const scoreOfComp = document.querySelector('.comp-score');
 const roundMessage = document.querySelector('.message');
-
+const player = document.querySelector('.player-selection');
+const comp = document.querySelector('.comp-selection');
 
 
 buttons.forEach((button)=> {
     button.addEventListener('click',e => {
         const selectionName = button.dataset.selection
         if (playerWin >=5 || compWin >= 5)
-        return;
-
+            return;
+           
         game(selectionName);
 })})
 
@@ -86,13 +87,40 @@ function playRound(playerSelection, computerSelection){
     scoreOfComp.textContent = compWin;
 }
 
+function paragraph(text) {
+    const p = document.createElement('p');
+    p.textContent = text;
+    return p;
+}
+
+function winner(){
+    let t = ""
+    if (playerWin === 5)
+        t = "You win the game!";
+    else if (compWin === 5)
+        t = "Computer wins the game!"
+    
+    win.appendChild(paragraph(t));
+}
+
 // Main game function to play the game
 function game(playerSelect){
  
     let playerSelection = playerSelect
     let computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
-    
+    player.appendChild(paragraph(playerSelection));
+    comp.appendChild(paragraph(computerSelection));
+
+    if (playerWin >= 5 && compWin < 5){
+        roundMessage.textContent = "You won the game!"
+    }
+    else if (playerWin <5 && compWin === 5){
+        roundMessage.textContent = "The computer won the game!"
+    }
+
     
 }
+
+
 
