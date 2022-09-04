@@ -7,7 +7,6 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
 .heading{
     text-align: center;
 }
@@ -16,7 +15,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     
-    
+
 
 }
 .selection {
@@ -28,14 +27,6 @@ button {
     border: none;
     
 }
-
-.grow { 
-    transition: all .2s ease-in-out; 
-    }
-    
-    .grow:hover { 
-    transform: scale(1.5); 
-    }
 
 .score {
     display: flex;
@@ -50,8 +41,6 @@ button {
     margin: 50px;
     font-size: 30px;
 }
-
-
 
 .sHistory {
     display: flex;
@@ -73,8 +62,30 @@ button {
     margin-bottom: 10px;
   }
 
+.credit {
+    font-size: 20px;
+}
+.git{
+    color: black;
+}
 
-  .glow1 {
+
+/* Effects */
+
+.grow { 
+    transition: all .2s ease-in-out; 
+    }
+    
+    .grow:hover { 
+    transform: scale(1.5); 
+    }
+
+.git:link { text-decoration: none; }
+.git:visited { text-decoration: none; }
+.git:hover { text-decoration: none; }
+.git:active { text-decoration: none; }
+
+.glow1 {
     font-size: 50px;
     color: blue;
     text-align: center;
@@ -91,7 +102,6 @@ button {
       text-shadow: 0 0 20px #fff, 0 0 30px #1B62DC 0 0 40px #1B62DC, 0 0 50px #1B62DC, 0 0 60px #1B62DC, 0 0 70px #1B62DC 0 0 80px #1B62DC;
     }
   }
-
 
   .glow2 {
     font-size: 50px;
@@ -110,13 +120,3 @@ button {
       text-shadow: 0 0 20px #fff, 0 0 30px #FF0000 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 60px #FF0000, 0 0 70px #FF0000 0 0 80px #FF0000;
     }
   }
-.credit {
-    font-size: 20px;
-}
-.git{
-    color: black;
-}
-.git:link { text-decoration: none; }
-.git:visited { text-decoration: none; }
-.git:hover { text-decoration: none; }
-.git:active { text-decoration: none; }
