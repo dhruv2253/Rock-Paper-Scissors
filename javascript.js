@@ -38,39 +38,39 @@ let compWin = 0;
 function playRound(playerSelection, computerSelection){
 
     // Ff player chooses rock and computer chooses paper
-    if (playerSelection === "rock" && computerSelection === "Paper"){
+    if (playerSelection === "Rock" && computerSelection === "Paper"){
         // Display what happens, and increment compWin by 1
         
         roundMessage.textContent = "You Lose! Paper beats rock";
         compWin++;
     }
     // If player chooses rock and computer chooses scissors
-    else if (playerSelection === "rock" && computerSelection === "Scissors"){
+    else if (playerSelection === "Rock" && computerSelection === "Scissors"){
        // Display what happens, and increment playerWin by 1
        roundMessage.textContent = "You Win! Rock beats scissors";
         playerWin++;
 
     }
     // If player chooses paper and computer chooses scissors
-    else if (playerSelection === "paper" && computerSelection === "Scissors"){
+    else if (playerSelection === "Paper" && computerSelection === "Scissors"){
         // Display what happens, and increment compWin by 1
         roundMessage.textContent = "You Lose! Scissors beat paper";
         compWin++;
     }
     // If player chooses paper and computer chooses rock
-    else if (playerSelection === "paper" && computerSelection === "Rock"){
+    else if (playerSelection === "Paper" && computerSelection === "Rock"){
         // Display what happens, and increment playerWin by 1
         roundMessage.textContent = "You Win! Paper beats rock";
         playerWin++;  
     }
     // If player chooses scissors and computer chooses paper
-    else if (playerSelection  === "scissors" && computerSelection === "Paper"){
+    else if (playerSelection  === "Scissors" && computerSelection === "Paper"){
         // Display what happens, and increment playerWin by 1
         roundMessage.textContent = "You Win! Scissors beats paper";
         playerWin++; 
     }
     // If player chooses scissors and computer chooses rock
-    else if (playerSelection === "scissors" && computerSelection === "Rock"){
+    else if (playerSelection === "Scissors" && computerSelection === "Rock"){
         // Display what happens, and increment compWin by 1
         roundMessage.textContent = "You Lose! Rock beats scissors";
         compWin++;  
@@ -93,15 +93,9 @@ function paragraph(text) {
     return p;
 }
 
-function winner(){
-    let t = ""
-    if (playerWin === 5)
-        t = "You win the game!";
-    else if (compWin === 5)
-        t = "Computer wins the game!"
-    
-    win.appendChild(paragraph(t));
-}
+
+
+
 
 // Main game function to play the game
 function game(playerSelect){
@@ -109,14 +103,15 @@ function game(playerSelect){
     let playerSelection = playerSelect
     let computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
+   
     player.appendChild(paragraph(playerSelection));
     comp.appendChild(paragraph(computerSelection));
 
     if (playerWin >= 5 && compWin < 5){
-        roundMessage.textContent = "You won the game!"
+        roundMessage.textContent = "You won the game! The world is saved!"
     }
     else if (playerWin <5 && compWin === 5){
-        roundMessage.textContent = "The computer won the game!"
+        roundMessage.textContent = "The computer won the game... The world is destroyed."
     }
 
     

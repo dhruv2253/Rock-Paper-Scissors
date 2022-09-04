@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>RPS</title>
 </head>
 <body>
     
     <div class="heading">
-        <h1 class="welcome">Time to play!</h1>
+        <h1 class="welcome">BEAT THE COMPUTER TO SAVE THE WORLD!</h1>
         <h1 class="RPS">Rock, Paper, Scissors...</h1>
     </div>
     
     <div class="container">
         <div class="score">
-            <div class="player-score">0</div>
-            <div class="comp-score">0</div>
+            <div class="player-score glow1">0</div>
+            <div class="comp-score glow2">0</div>
             
         </div>
         <div class="message"></div>
         
         <div class="selections">
-            <button class="selection" data-selection="rock" >🪨</button>
-            <button class="selection" data-selection="paper" >📄</button>
-            <button class="selection" data-selection="scissors" >✂️</button>
+            <button class="selection grow glow-button" data-selection="Rock" >🪨</button>
+            <button class="selection grow glow-button" data-selection="Paper" >📄</button>
+            <button class="selection grow glow-button" data-selection="Scissors" >✂️</button>
         </div>
         
         
@@ -33,8 +34,6 @@
                 <h2 class="history-head">Player</h2>
                 <div class="player-selection"></div>
             </div>
-        </div>
-        <div class="sHistory">
             <div class="dashboard-side">
                 <h2 class="history-head">Computer</h2>
                 <div class="comp-selection"></div>
@@ -42,6 +41,10 @@
         </div>
     </div>
     
+    <footer>
+        <p class="credit">Made by: Dhruv Patel</p>
+        <a class="git" href="https://github.com/dhruv2253"target="_blank">GitHub</a>
+    </footer>
     <script src="javascript.js"></script>
 </body>
 </html>

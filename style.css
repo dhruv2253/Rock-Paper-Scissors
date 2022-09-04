@@ -1,0 +1,122 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("city.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1500px 1500px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.heading{
+    text-align: center;
+}
+
+.selections {
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+
+}
+.selection {
+    font-size: 100px;
+}
+
+button {
+	background-color: rgba(255,255,255,0);
+    border: none;
+    
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+    }
+    
+    .grow:hover { 
+    transform: scale(1.5); 
+    }
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+    font-size: 50px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-size: 30px;
+}
+
+
+
+.sHistory {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-size: 20px;
+}
+
+.dashboard-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .heading-sub {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+
+  .glow1 {
+    font-size: 50px;
+    color: blue;
+    text-align: center;
+    -webkit-animation: glow1 1s ease-in-out infinite alternate;
+    -moz-animation: glow1 1s ease-in-out infinite alternate;
+    animation: glow1 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow1 {
+    from {
+      text-shadow: 0 0 10px #1B62DC, 0 0 20px #fff, 0 0 30px #1B62DC, 0 0 40px #1B62DC, 0 0 50px #1B62DC, 0 0 60px #1B62DC, 0 0 70px #1B62DC;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #1B62DC 0 0 40px #1B62DC, 0 0 50px #1B62DC, 0 0 60px #1B62DC, 0 0 70px #1B62DC 0 0 80px #1B62DC;
+    }
+  }
+
+
+  .glow2 {
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    -webkit-animation: glow2 1s ease-in-out infinite alternate;
+    -moz-animation: glow2 1s ease-in-out infinite alternate;
+    animation: glow2 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow2 {
+    from {
+      text-shadow: 0 0 10px #FF0000, 0 0 20px #fff, 0 0 30px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 60px #FF0000, 0 0 70px #FF0000;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #FF0000 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 60px #FF0000, 0 0 70px #FF0000 0 0 80px #FF0000;
+    }
+  }
+.credit {
+    font-size: 20px;
+}
+.git{
+    color: black;
+}
+.git:link { text-decoration: none; }
+.git:visited { text-decoration: none; }
+.git:hover { text-decoration: none; }
+.git:active { text-decoration: none; }
